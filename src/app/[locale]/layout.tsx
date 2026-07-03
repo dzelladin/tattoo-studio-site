@@ -66,6 +66,15 @@ export default async function LocaleLayout({
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="flex min-h-screen flex-col">
+        {/* Ambient light + editorial column rails, fixed behind the page.
+            Pure decoration: aria-hidden, no pointer events, z-0 under the
+            sticky header (z-40) and banner (z-50). */}
+        <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
+          <div className="animate-drift absolute -top-40 right-[-15%] h-[36rem] w-[36rem] rounded-full bg-blood-500/12 blur-[120px]" />
+          <div className="animate-drift absolute bottom-[-20%] left-[-12%] h-[32rem] w-[32rem] rounded-full bg-blood-700/10 blur-[130px] [animation-delay:-14s]" />
+          <div className="absolute top-1/3 left-1/2 h-[28rem] w-[44rem] -translate-x-1/2 rounded-full bg-bone-100/[0.035] blur-[140px]" />
+          <div className="mx-auto h-full max-w-6xl border-x border-bone-100/[0.045]" />
+        </div>
         <NextIntlClientProvider>
           <ConsentProvider>
             <a

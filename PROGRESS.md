@@ -106,6 +106,22 @@ Second "make it amazing" pass; typography became the lead element:
 - All decorative pieces aria-hidden; marquee/spin/reveal all disabled
   under prefers-reduced-motion.
 
+## Phase 9 — Atmosphere pass (2026-07-03) ✅
+
+Third richness pass, aimed at backgrounds ("not so plain"):
+
+- Site-wide fixed ambient layer in the locale layout: two drifting
+  blood-red glow blobs (28s alternate), one static bone glow, and
+  editorial column rails at the content edges. aria-hidden, z-0.
+- `bg-ornament` utility: tiling SVG diamond-lattice wallpaper (bone
+  strokes at 4.5%, red centre dot); applied via `Section pattern` prop
+  (home studio/journal, FAQ pricing, studio process) and to PageHeader +
+  hero — always as a masked absolute layer so masks never fade content.
+- Red gradient hairline under the sticky header; edge-fade mask on the
+  marquee; cards upgraded to ink gradient + inset top highlight.
+- Note: headless screenshots need ~12s virtual-time budget now — blur
+  reveal transitions race shorter budgets and capture as empty.
+
 ## Decisions worth remembering
 
 - **No CMS** on purpose: content = typed TS modules + MDX. Right size for a

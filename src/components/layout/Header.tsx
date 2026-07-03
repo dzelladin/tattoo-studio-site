@@ -44,6 +44,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink-800 bg-ink-950/90 backdrop-blur-sm">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-blood-500/50 to-transparent"
+      />
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link
           href="/"

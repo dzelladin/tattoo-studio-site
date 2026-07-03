@@ -53,6 +53,14 @@ export default async function HomePage({
           aria-hidden
           className="absolute inset-0 bg-linear-to-r from-ink-950 via-ink-950/80 to-ink-950/40 lg:hidden"
         />
+        <div
+          aria-hidden
+          className="bg-ornament absolute inset-0 [mask-image:radial-gradient(55rem_32rem_at_22%_35%,black,transparent)]"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-32 left-[8%] h-[26rem] w-[26rem] rounded-full bg-blood-500/10 blur-[110px]"
+        />
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 sm:px-8 sm:py-32 lg:grid-cols-[1.15fr_1fr] lg:py-24">
           <div>
@@ -119,7 +127,7 @@ export default async function HomePage({
       <Marquee items={marqueeItems} />
 
       {/* Studio teaser — copy beside an offset photo with a red corner */}
-      <Section>
+      <Section pattern>
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
           <Reveal>
             <SectionHeading
@@ -232,7 +240,7 @@ export default async function HomePage({
       </Section>
 
       {/* Journal */}
-      <Section className="border-t border-ink-800">
+      <Section pattern className="border-t border-ink-800">
         <Reveal>
           <SectionHeading
             index="04"

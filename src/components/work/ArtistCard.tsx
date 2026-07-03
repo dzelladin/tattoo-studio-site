@@ -20,7 +20,7 @@ export async function ArtistCard({
   return (
     <Link
       href={`/artists/${artist.slug}`}
-      className="group block border border-ink-800 bg-ink-900 transition-colors hover:border-ink-700"
+      className="group block border border-ink-800 bg-linear-to-b from-ink-900 to-ink-950 shadow-[inset_0_1px_0_rgba(237,232,220,0.06)] transition-colors hover:border-ink-700"
     >
       <div className="relative aspect-[4/5] overflow-hidden">
         <Image

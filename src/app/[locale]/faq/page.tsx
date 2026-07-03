@@ -30,7 +30,7 @@ export default async function FaqPage({
     <>
       <PageHeader kicker={t("kicker")} title={t("title")} lede={t("lede")} />
 
-      <Section>
+      <Section pattern>
         <Reveal>
           <SectionHeading
             kicker={t("kicker")}
@@ -41,7 +41,7 @@ export default async function FaqPage({
         <dl className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PRICING.map((tier, i) => (
             <Reveal key={tier.id} delay={i * 80} className="h-full">
-              <div className="flex h-full flex-col border border-ink-800 bg-ink-900 p-6">
+              <div className="flex h-full flex-col border border-ink-800 bg-linear-to-b from-ink-900 to-ink-950 p-6 shadow-[inset_0_1px_0_rgba(237,232,220,0.06)] transition-colors hover:border-ink-700">
                 <dt className="font-display text-lg font-semibold">
                   {tier.name[locale]}
                 </dt>

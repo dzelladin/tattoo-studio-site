@@ -59,7 +59,7 @@ export default async function StudioPage({
         <div aria-hidden className="absolute inset-0 bg-ink-950/30" />
       </div>
 
-      <Section>
+      <Section pattern>
         <Reveal>
           <SectionHeading kicker={t("kicker")} title={t("processTitle")} />
         </Reveal>
@@ -67,7 +67,7 @@ export default async function StudioPage({
           {steps.map((n, i) => (
             <li key={n}>
               <Reveal delay={i * 100} className="h-full">
-                <div className="flex h-full flex-col border border-ink-800 bg-ink-900 p-6">
+                <div className="flex h-full flex-col border border-ink-800 bg-linear-to-b from-ink-900 to-ink-950 p-6 shadow-[inset_0_1px_0_rgba(237,232,220,0.06)] transition-colors hover:border-ink-700">
                   <span
                     aria-hidden
                     className="font-mono text-sm text-blood-300"

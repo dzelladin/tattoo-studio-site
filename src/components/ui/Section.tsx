@@ -5,14 +5,26 @@ export function Section({
   children,
   className,
   id,
+  pattern = false,
 }: {
   children: ReactNode;
   className?: string;
   id?: string;
+  /** Lay the diamond-ornament wallpaper behind this section. */
+  pattern?: boolean;
 }) {
   return (
-    <section id={id} className={cn("px-5 py-16 sm:px-8 sm:py-24", className)}>
-      <div className="mx-auto w-full max-w-6xl">{children}</div>
+    <section
+      id={id}
+      className={cn("relative px-5 py-16 sm:px-8 sm:py-24", className)}
+    >
+      {pattern ? (
+        <div
+          aria-hidden
+          className="bg-ornament absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_6rem,black_calc(100%-6rem),transparent)]"
+        />
+      ) : null}
+      <div className="relative mx-auto w-full max-w-6xl">{children}</div>
     </section>
   );
 }

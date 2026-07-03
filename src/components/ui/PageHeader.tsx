@@ -19,6 +19,14 @@ export function PageHeader({
     <header className="relative overflow-hidden border-b border-ink-800">
       <div
         aria-hidden
+        className="bg-ornament absolute inset-0 [mask-image:linear-gradient(to_bottom,black,black_60%,transparent)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-blood-500/10 blur-[110px]"
+      />
+      <div
+        aria-hidden
         className="pointer-events-none absolute top-1/2 -right-24 h-[26rem] w-[26rem] -translate-y-1/2 opacity-[0.08] sm:-right-12"
       >
         <Sigil seed={title} accent />

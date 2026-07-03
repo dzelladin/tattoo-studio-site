@@ -8,7 +8,7 @@ export function Marquee({ items }: { items: string[] }) {
   return (
     <div
       aria-hidden="true"
-      className="overflow-hidden border-y border-ink-800 bg-ink-900/60 py-3"
+      className="overflow-hidden border-y border-ink-800 bg-ink-900/60 py-3 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
     >
       <div className="animate-marquee flex w-max">
         {[0, 1].map((half) => (

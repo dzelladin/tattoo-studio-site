@@ -89,6 +89,23 @@ User feedback: "too bland, empty black". Fixes, all brand-consistent:
 - Studio page got a full-width photo band; artist cards got "01/02/03"
   index chips.
 
+## Phase 8 — Editorial redesign (2026-07-03) ✅
+
+Second "make it amazing" pass; typography became the lead element:
+
+- Hero: heroTitle split per sentence (`/(?<=\.)\s+/`, works in all 3
+  locales) into alternating filled/outlined display lines beside an
+  offset photo panel with a red ghost frame over a 90s-rotation sigil;
+  vertical side label on xl screens.
+- `text-stroke` / `text-stroke-faint` utilities (globals.css); ghost
+  outlined numerals 01–04 behind home section headings (SectionHeading
+  `index` prop); giant outlined OBSIDIAN INK wordmark atop the footer.
+- Interaction: blood-red multiply wash on gallery tiles + artist
+  portraits on hover, animated red nav underlines, arrow nudge on post
+  cards; reveals upgraded to blur+scale+fade.
+- All decorative pieces aria-hidden; marquee/spin/reveal all disabled
+  under prefers-reduced-motion.
+
 ## Decisions worth remembering
 
 - **No CMS** on purpose: content = typed TS modules + MDX. Right size for a

@@ -9,8 +9,8 @@ export interface Artist {
   since: number;
   instagram: string;
   specialties: StyleId[];
-  /** Seed for the generative portrait mark (see <Sigil>). */
-  sigilSeed: string;
+  /** Path under /public. Rendered grayscale like the gallery. */
+  portrait: string;
   portraitAlt: Localized;
   bio: Localized;
 }
@@ -25,13 +25,13 @@ export const ARTISTS: Artist[] = [
       al: "Themeluese dhe artiste",
     },
     since: 2013,
-    instagram: "jana.crnareka",
+    instagram: "jana.obsidian",
     specialties: ["ornamental", "folk"],
-    sigilSeed: "jana-stojanovska",
+    portrait: "/images/artists/jana.jpg",
     portraitAlt: {
-      mk: "Личен знак на Јана: осмокрако сончево тркало во црно",
-      en: "Jana’s personal mark: an eight-spoked solar wheel in black",
-      al: "Shenja personale e Janës: një rrotë diellore me tetë rreze në të zezë",
+      mk: "Јана на својата станица, подготвува пигмент пред сесија; на подлактицата ѝ се гледа тетоважа",
+      en: "Jana at her station, preparing pigment before a session, a tattooed forearm in frame",
+      al: "Jana në stacionin e saj, duke përgatitur pigmentin para një seance, me parakrahun e tatuar në kuadër",
     },
     bio: {
       mk: "Јана го отвори студиото во 2019, по чиракување во Белград и шест години работа по гостувања низ Европа. Нејзината опсесија се везовите од Мариово и Скопска Црна Гора — геометрија што ја документира по етнографски збирки, па ја прекомпонира за тело. Работи бавно, со листа на чекање од неколку месеци, и најсреќна е кога проектот почнува од предмет со семејна историја.",
@@ -46,11 +46,11 @@ export const ARTISTS: Artist[] = [
     since: 2016,
     instagram: "darko.blk",
     specialties: ["geometric", "blackout"],
-    sigilSeed: "darko-velkov",
+    portrait: "/images/artists/darko.jpg",
     portraitAlt: {
-      mk: "Личен знак на Дарко: концентрични кругови со ромб во средината",
-      en: "Darko’s personal mark: concentric circles with a central diamond",
-      al: "Shenja personale e Darkos: rrathë koncentrikë me një romb në qendër",
+      mk: "Дарко со капа, наведнат над рака во длабока концентрација додека тетовира",
+      en: "Darko in a cap, bent over an arm in deep concentration while tattooing",
+      al: "Darko me kapelë, i përkulur mbi një krah në përqendrim të thellë duke tatuar",
     },
     bio: {
       mk: "Дарко студираше архитектура пред да ја замени хартијата со кожа. Од таму го носи начинот на размислување: сè што црта е конструирано, со мрежи, оски и симетрии што го следат движењето на мускулот. Специјалност му се големи геометриски композиции и тешки црни површини — парчиња што се планираат како градба, во повеќе сесии.",
@@ -65,11 +65,11 @@ export const ARTISTS: Artist[] = [
     since: 2018,
     instagram: "aylin.dots",
     specialties: ["dotwork", "ornamental"],
-    sigilSeed: "aylin-rexhepi",
+    portrait: "/images/artists/aylin.jpg",
     portraitAlt: {
-      mk: "Личен знак на Ајлин: прстен од точки околу розета",
-      en: "Aylin’s personal mark: a ring of dots around a rosette",
-      al: "Shenja personale e Aylinit: një unazë pikash rreth një rozete",
+      mk: "Ајлин со маска додека тетовира подлактица, со машинката цврсто во рака",
+      en: "Aylin masked at work, tattooing a forearm with a precise machine grip",
+      al: "Aylin me maskë në punë, duke tatuar një parakrah me kapje të saktë të makinës",
     },
     bio: {
       mk: "Ајлин доаѓа од графиката — четири години правеше линорез и сериграфија пред да земе машинка во рака. Нејзиниот дотворк се потпира на трпение: илјадници точки што градат градиенти какви што иглата инаку не дава. Работи најмногу на ’рбет, гради и раце, и е позната по тоа што одбива проект ако не верува дека ќе старее добро.",

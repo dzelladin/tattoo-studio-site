@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -9,7 +10,6 @@ import { styleLabel } from "@/content/styles";
 import { ButtonLink } from "@/components/ui/Button";
 import { Kicker, Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { Sigil } from "@/components/ui/Sigil";
 import { ArtworkTile } from "@/components/work/ArtworkTile";
 
 export function generateStaticParams() {
@@ -54,12 +54,14 @@ export default async function ArtistPage({
         </Link>
 
         <div className="mt-10 grid items-start gap-10 lg:grid-cols-[auto_1fr]">
-          <div
-            role="img"
-            aria-label={artist.portraitAlt[locale]}
-            className="h-48 w-48 border border-ink-800 bg-ink-900 p-4"
-          >
-            <Sigil seed={artist.sigilSeed} accent />
+          <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden border border-ink-800 bg-ink-900 lg:w-64">
+            <Image
+              src={artist.portrait}
+              alt={artist.portraitAlt[locale]}
+              fill
+              sizes="(min-width: 1024px) 256px, 320px"
+              className="object-cover grayscale"
+            />
           </div>
 
           <div className="max-w-2xl">
@@ -103,11 +105,7 @@ export default async function ArtistPage({
             {works.map((item, i) => (
               <li key={item.id} className="group">
                 <Reveal delay={(i % 3) * 80}>
-                  <ArtworkTile
-                    seed={item.id}
-                    alt={item.alt[locale]}
-                    accent={i % 4 === 0}
-                  />
+                  <ArtworkTile image={item.image} alt={item.alt[locale]} />
                   <p className="mt-3 text-sm font-semibold">
                     {item.title[locale]}
                   </p>

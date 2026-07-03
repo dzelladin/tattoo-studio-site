@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Crna Reka — studio tatuazhesh blackwork, Shkup",
+    "title": "Obsidian Ink — studio tatuazhesh blackwork, Shkup",
     "description": "Studio tatuazhesh blackwork dhe dotwork në Debar Maalo, Shkup. Ornamenti ballkanik i rindërtuar në të zezë. Vetëm me termin."
   },
   "nav": {
@@ -25,8 +25,8 @@
     "heroCtaPrimary": "Rezervo seancë",
     "heroCtaSecondary": "Shiko punët",
     "studioKicker": "Studioja",
-    "studioTitle": "Nëpër qytetin e vjetër rrjedh një lumë i zi.",
-    "studioBody": "Crna Reka është kolektiv me tre artistë në Debar Maalo. Një stil, i marrë seriozisht: blackwork me rrënjë në ornamentin e këtij rajoni — pa ngjyra, pa portrete, pa mbushje.",
+    "studioTitle": "Obsidiani ishte tehu i parë i tatuimit.",
+    "studioBody": "Obsidian Ink është kolektiv me tre artistë në Debar Maalo. Një stil, i marrë seriozisht: blackwork me rrënjë në ornamentin e këtij rajoni — pa ngjyra, pa portrete, pa mbushje.",
     "studioLink": "Rreth studios",
     "artistsKicker": "Kolektivi",
     "artistsTitle": "Tre artistë. Një disiplinë.",
@@ -44,7 +44,7 @@
   "studio": {
     "kicker": "Studioja",
     "title": "Ornamenti është kujtesë.",
-    "lede": "Crna Reka — „lumi i zi“ — u hap më 2019, në një banesë përdhese në Debar Maalo, Shkup. Emri është rryma e vjetër e motiveve ballkanike që rishfaqet në sipërfaqe — kësaj here mbi lëkurë.",
+    "lede": "Obsidian Ink u hap më 2019, në një banesë përdhese në Debar Maalo, Shkup. Emri nderon xhamin vullkanik me të cilin u gdhendën tatuazhet e para në lëkurë, mijëvjeçarë para makinave — i zi, i saktë, më i vjetër se kufijtë.",
     "philosophyTitle": "Çfarë bëjmë",
     "philosophyBody1": "Çdo kulturë e këtij rajoni ka endur gjeometri mbrojtëse në pëlhurë: rombe kundër syrit të keq, rrota diellore për vazhdimësi, kryqe e rozeta që shënojnë pragje. Ai fjalor s’ka qenë kurrë i menduar për muze — ka qenë i menduar të mbahet mbi trup.",
     "philosophyBody2": "Punojmë vetëm në të zezë. Blackwork ornamental, dotwork dhe kompozime gjeometrike në format të madh, të dizajnuara për trupin konkret që do t’i mbajë. Nuk kopjojmë flash, nuk riprodhojmë punët e të tjerëve dhe nuk tatuojmë diçka pas së cilës nuk qëndrojmë.",
@@ -125,12 +125,12 @@
     },
     "success": {
       "title": "Kërkesa u pranua.",
-      "body": "Përgjigjemi brenda dy ditësh pune. S’ka përgjigje pas kësaj? Shkruaj në studio@crnareka.mk.",
+      "body": "Përgjigjemi brenda dy ditësh pune. S’ka përgjigje pas kësaj? Shkruaj në studio@obsidianink.mk.",
       "again": "Dërgo kërkesë tjetër"
     },
     "error": {
       "title": "Diçka shkoi keq.",
-      "body": "Kërkesa nuk kaloi. Provo përsëri ose shkruaj drejtpërdrejt në studio@crnareka.mk.",
+      "body": "Kërkesa nuk kaloi. Provo përsëri ose shkruaj drejtpërdrejt në studio@obsidianink.mk.",
       "retry": "Provo përsëri"
     },
     "aside": {
@@ -170,7 +170,7 @@
   },
   "notFound": {
     "title": "S’ka asgjë këtu.",
-    "body": "Faqja është zhvendosur ose s’ka ekzistuar kurrë. Lumi e njeh shtratin e vet.",
+    "body": "Faqja është zhvendosur ose s’ka ekzistuar kurrë. Xhami mbetet i mprehtë gjithsesi.",
     "back": "Kthehu në ballinë"
   }
 }

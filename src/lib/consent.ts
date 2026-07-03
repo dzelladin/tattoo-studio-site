@@ -1,6 +1,6 @@
 export type ConsentValue = "accepted" | "rejected";
 
-export const CONSENT_COOKIE = "cr-consent";
+export const CONSENT_COOKIE = "oi-consent";
 /** Six months, in seconds — long enough to not nag, short enough to re-ask. */
 export const CONSENT_MAX_AGE = 60 * 60 * 24 * 182;
 

@@ -49,7 +49,7 @@ export function Header() {
           href="/"
           className="font-display text-sm font-bold tracking-[0.18em] text-bone-100 uppercase"
         >
-          Crna Reka
+          Obsidian Ink
         </Link>
 
         <nav aria-label={t("mainLabel")} className="hidden items-center gap-7 lg:flex">

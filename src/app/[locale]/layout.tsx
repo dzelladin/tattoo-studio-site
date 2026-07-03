@@ -41,7 +41,7 @@ export async function generateMetadata({
   return {
     title: {
       default: t("title"),
-      template: `%s — Crna Reka`,
+      template: `%s — Obsidian Ink`,
     },
     description: t("description"),
   };

@@ -20,7 +20,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div>
           <p className="font-display text-sm font-bold tracking-[0.18em] uppercase">
-            Crna Reka
+            Obsidian Ink
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-bone-500">
             {t("tagline")}
@@ -46,20 +46,20 @@ export function Footer() {
           <ul className="mt-3 space-y-1.5 text-sm">
             <li>
               <a
-                href="mailto:studio@crnareka.mk"
+                href="mailto:studio@obsidianink.mk"
                 className="text-bone-300 transition-colors hover:text-bone-100"
               >
-                studio@crnareka.mk
+                studio@obsidianink.mk
               </a>
             </li>
             <li>
               <a
-                href="https://instagram.com/crnareka.ttt"
+                href="https://instagram.com/obsidianink.ttt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-bone-300 transition-colors hover:text-bone-100"
               >
-                @crnareka.ttt
+                @obsidianink.ttt
               </a>
             </li>
           </ul>
@@ -87,7 +87,7 @@ export function Footer() {
       <div className="border-t border-ink-800">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-5 text-xs text-bone-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <p>
-            © {new Date().getFullYear()} Crna Reka. {t("rights")}
+            © {new Date().getFullYear()} Obsidian Ink. {t("rights")}
           </p>
           <CookieSettingsButton />
         </div>

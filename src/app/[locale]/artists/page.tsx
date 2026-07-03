@@ -35,7 +35,7 @@ export default async function ArtistsPage({
         {t("lede")}
       </p>
 
-      <div className="mt-14 grid gap-6 text-center sm:grid-cols-3">
+      <div className="mt-14 grid gap-6 sm:grid-cols-3">
         {ARTISTS.map((artist, i) => (
           <Reveal key={artist.slug} delay={i * 100}>
             <ArtistCard artist={artist} locale={locale} />

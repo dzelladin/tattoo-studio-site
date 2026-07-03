@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Crna Reka — Blackwork tattoo studio, Skopje",
+    "title": "Obsidian Ink — Blackwork tattoo studio, Skopje",
     "description": "Blackwork and dotwork tattoo studio in Debar Maalo, Skopje. Balkan ornament rebuilt in black. By appointment only."
   },
   "nav": {
@@ -25,8 +25,8 @@
     "heroCtaPrimary": "Book a session",
     "heroCtaSecondary": "See the work",
     "studioKicker": "The studio",
-    "studioTitle": "A black river runs through the old town.",
-    "studioBody": "Crna Reka is a three-artist collective in Debar Maalo. One style, taken seriously: blackwork with roots in the ornament of this region — no colour, no portraits, no filler.",
+    "studioTitle": "Obsidian was the first tattoo blade.",
+    "studioBody": "Obsidian Ink is a three-artist collective in Debar Maalo. One style, taken seriously: blackwork with roots in the ornament of this region — no colour, no portraits, no filler.",
     "studioLink": "About the studio",
     "artistsKicker": "The collective",
     "artistsTitle": "Three artists. One discipline.",
@@ -44,7 +44,7 @@
   "studio": {
     "kicker": "The studio",
     "title": "Ornament is memory.",
-    "lede": "Crna Reka — “black river” — opened in 2019 in a ground-floor flat in Debar Maalo, Skopje. The name is the old current of Balkan pattern-making, resurfacing — this time on skin.",
+    "lede": "Obsidian Ink opened in 2019 in a ground-floor flat in Debar Maalo, Skopje. The name honours the volcanic glass that cut the first tattoos into skin, millennia before machines — black, precise, older than borders.",
     "philosophyTitle": "What we do",
     "philosophyBody1": "Every culture in this region wove protective geometry into cloth: diamonds against the evil eye, solar wheels for continuity, crosses and rosettes marking thresholds. That vocabulary was never meant for a museum — it was meant to be worn on the body.",
     "philosophyBody2": "We work exclusively in black. Ornamental blackwork, dotwork and large-scale geometric composition, designed for the specific body that will carry it. We don’t copy flash, we don’t reproduce other artists’ work, and we don’t tattoo anything we can’t stand behind.",
@@ -125,12 +125,12 @@
     },
     "success": {
       "title": "Inquiry received.",
-      "body": "We’ll reply within two working days. No answer after that? Write to studio@crnareka.mk.",
+      "body": "We’ll reply within two working days. No answer after that? Write to studio@obsidianink.mk.",
       "again": "Send another inquiry"
     },
     "error": {
       "title": "Something went wrong.",
-      "body": "Your inquiry didn’t go through. Try again, or email studio@crnareka.mk directly.",
+      "body": "Your inquiry didn’t go through. Try again, or email studio@obsidianink.mk directly.",
       "retry": "Try again"
     },
     "aside": {
@@ -170,7 +170,7 @@
   },
   "notFound": {
     "title": "Nothing here.",
-    "body": "The page moved, or never existed. The river keeps its own course.",
+    "body": "The page moved, or never existed. The glass stays sharp either way.",
     "back": "Back to home"
   }
 }

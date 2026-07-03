@@ -1,35 +1,35 @@
-import { Sigil } from "@/components/ui/Sigil";
+import Image from "next/image";
 import { cn } from "@/lib/cn";
 
 /**
- * A framed piece of work. The generative sigil is decorative; the tile
- * itself carries the accessible description (role="img" + aria-label),
- * which is the item's real alt text from the content model.
+ * A framed piece of work. Photos render grayscale so mixed-source
+ * photography reads as one monochrome set — the studio only works
+ * in black, and the site should look like it.
  */
 export function ArtworkTile({
-  seed,
+  image,
   alt,
-  accent,
+  sizes = "(min-width: 1024px) 350px, (min-width: 640px) 45vw, 90vw",
   className,
 }: {
-  seed: string;
+  image: string;
   alt: string;
-  accent?: boolean;
+  sizes?: string;
   className?: string;
 }) {
   return (
     <div
-      role="img"
-      aria-label={alt}
       className={cn(
-        "relative aspect-square overflow-hidden border border-ink-800 bg-ink-900 p-6 transition-colors duration-300 group-hover:border-ink-700",
+        "relative aspect-square overflow-hidden border border-ink-800 bg-ink-900 transition-colors duration-300 group-hover:border-ink-700",
         className,
       )}
     >
-      <Sigil
-        seed={seed}
-        accent={accent}
-        className="transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+      <Image
+        src={image}
+        alt={alt}
+        fill
+        sizes={sizes}
+        className="object-cover grayscale transition-transform duration-500 ease-out group-hover:scale-[1.04]"
       />
     </div>
   );

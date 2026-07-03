@@ -7,7 +7,7 @@ import { bookingSchema, fieldErrors, type BookingData } from "@/lib/booking";
 
 export const runtime = "nodejs";
 
-const STUDIO_INBOX = process.env.BOOKING_INBOX ?? "studio@crnareka.mk";
+const STUDIO_INBOX = process.env.BOOKING_INBOX ?? "studio@obsidianink.mk";
 
 function renderEmail(data: BookingData): string {
   const artist =
@@ -34,7 +34,7 @@ async function deliver(data: BookingData): Promise<void> {
   if (apiKey) {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: process.env.BOOKING_FROM ?? "bookings@crnareka.mk",
+      from: process.env.BOOKING_FROM ?? "bookings@obsidianink.mk",
       to: STUDIO_INBOX,
       replyTo: data.email,
       subject: `Booking inquiry — ${data.name}`,

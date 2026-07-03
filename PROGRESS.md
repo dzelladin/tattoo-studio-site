@@ -1,18 +1,22 @@
-# PROGRESS — Crna Reka studio site
+# PROGRESS — Obsidian Ink studio site
 
 Status ledger for picking this project up cold. Newest phase last.
 
 ## Identity (fixed, do not re-litigate)
 
-- **Studio:** Crna Reka ("Black River"), blackwork/dotwork collective, Debar
-  Maalo, Skopje. Three artists: Jana Stojanovska (founder, ornamental/folk),
-  Darko Velkov (geometric/blackout), Aylin Rexhepi (dotwork/ornamental).
+- **Studio:** Obsidian Ink (renamed from "Crna Reka" 2026-07-03; name story =
+  obsidian blades were the first tattoo tools), blackwork/dotwork collective,
+  Debar Maalo, Skopje. Three artists: Jana Stojanovska (founder,
+  ornamental/folk), Darko Velkov (geometric/blackout), Aylin Rexhepi
+  (dotwork/ornamental).
 - **Voice:** austere, declarative, no exclamation marks, no "ink your dreams".
 - **Visual system:** warm near-black (`ink-*`), bone off-whites (`bone-*`),
   oxide red accent (`blood-*`), Unbounded (display) + Manrope (body) +
-  JetBrains Mono (labels). Imagery is deterministic generative SVG "sigils"
-  (`src/components/ui/Sigil.tsx`) standing in for photography — swap for real
-  photos by replacing `ArtworkTile` internals; alt text is already modeled.
+  JetBrains Mono (labels). Gallery/portraits are real photos in
+  `public/images/` (Unsplash free license), rendered with a CSS `grayscale`
+  filter to unify the set; per-locale alt text in the content model describes
+  each actual photograph. Generative SVG sigils remain as brand ornaments
+  (hero, 404). Cookie renamed `cr-consent` → `oi-consent`.
 
 ## Phase 1 — Scaffold + i18n ✅
 

@@ -15,6 +15,7 @@ export interface GalleryViewItem {
   styleLabels: string[];
   placement: string;
   year: number;
+  image: string;
   alt: string;
 }
 
@@ -65,7 +66,7 @@ export function GalleryGrid({
           {visible.map((item, i) => (
             <li key={item.id} className="group">
               <Reveal delay={(i % 3) * 80}>
-                <ArtworkTile seed={item.id} alt={item.alt} accent={i % 4 === 0} />
+                <ArtworkTile image={item.image} alt={item.alt} />
                 <div className="mt-3 flex items-baseline justify-between gap-3">
                   <h3 className="text-sm font-semibold text-bone-100">
                     {item.title}

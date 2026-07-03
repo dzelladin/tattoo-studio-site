@@ -33,7 +33,7 @@ export default async function HomePage({
           aria-hidden
           className="pointer-events-none absolute -top-24 -right-24 h-[34rem] w-[34rem] opacity-25 sm:opacity-40"
         >
-          <Sigil seed="crna-reka-hero" accent />
+          <Sigil seed="obsidian-ink-hero" accent />
         </div>
         <div className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-36">
           <Kicker>{t("heroKicker")}</Kicker>
@@ -90,11 +90,7 @@ export default async function HomePage({
           {featured.map((item, i) => (
             <li key={item.id} className="group">
               <Reveal delay={(i % 3) * 80}>
-                <ArtworkTile
-                  seed={item.id}
-                  alt={item.alt[locale]}
-                  accent={i % 4 === 0}
-                />
+                <ArtworkTile image={item.image} alt={item.alt[locale]} />
                 <p className="mt-3 text-sm font-semibold">{item.title[locale]}</p>
                 <p className="mt-0.5 text-xs text-bone-500">
                   {getArtist(item.artistSlug)?.name} · {item.year}
@@ -121,7 +117,7 @@ export default async function HomePage({
             </Link>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-6 text-center sm:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {ARTISTS.map((artist, i) => (
             <Reveal key={artist.slug} delay={i * 100}>
               <ArtistCard artist={artist} locale={locale} />

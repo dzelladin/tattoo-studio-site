@@ -1,7 +1,8 @@
-# Crna Reka — studio site
+# Obsidian Ink — studio site
 
-Presentational website for **Crna Reka**, a (fictional) blackwork and dotwork
-tattoo collective in Debar Maalo, Skopje. Three artists, one discipline:
+Presentational website for **Obsidian Ink**, a (fictional) blackwork and
+dotwork tattoo collective in Debar Maalo, Skopje — named for the volcanic
+glass that cut the first tattoos into skin. Three artists, one discipline:
 Balkan ornament — embroidery geometry, iconostasis carving, solar wheels —
 rebuilt as heavy, architectural blackwork. The site is trilingual
 (Macedonian / English / Albanian), fully static except the booking API, and
@@ -67,10 +68,12 @@ content/news/…           journal posts (MDX + frontmatter: title/date/excerpt/
 
 `artists`, `gallery` and `styles` reference each other by id — the portfolio
 filter, artist specialties and per-artist work lists all derive from the same
-vocabulary. Imagery is a deterministic generative SVG ornament
-(`src/components/ui/Sigil.tsx`) seeded per item — placeholder art in the
-brand's language until real photography exists; each tile still carries real
-alt text (`role="img"` + `aria-label`).
+vocabulary. Gallery and portrait photography lives in `public/images/`
+(sourced from Unsplash under its free license) and is referenced by path from
+the content model, with per-locale alt text describing each photograph.
+Photos render through a CSS `grayscale` filter so mixed sources read as one
+monochrome set. Brand ornaments (hero, 404) are generative SVG sigils
+(`src/components/ui/Sigil.tsx`).
 
 ## Booking form
 
@@ -83,7 +86,7 @@ drops bots with a convincing `200`.
 
 ## Cookie consent
 
-Real consent, not a cosmetic banner: the `cr-consent` cookie is the single
+Real consent, not a cosmetic banner: the `oi-consent` cookie is the single
 source of truth, exposed to React via `useSyncExternalStore`
 (`src/lib/consent.ts`, `src/components/consent/`). Until a visitor accepts,
 `AnalyticsGate` renders nothing — the non-essential script is never requested.

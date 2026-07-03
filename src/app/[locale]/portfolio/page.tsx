@@ -38,6 +38,7 @@ export default async function PortfolioPage({
     ),
     placement: item.placement[locale],
     year: item.year,
+    image: item.image,
     alt: item.alt[locale],
   }));
 

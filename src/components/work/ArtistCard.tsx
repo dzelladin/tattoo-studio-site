@@ -30,6 +30,10 @@ export async function ArtistCard({
           sizes="(min-width: 640px) 30vw, 90vw"
           className="object-cover grayscale transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
+        <span
+          aria-hidden
+          className="absolute inset-0 bg-blood-500/0 mix-blend-multiply transition-colors duration-500 group-hover:bg-blood-500/40"
+        />
         {index ? (
           <span
             aria-hidden

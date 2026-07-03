@@ -31,6 +31,11 @@ export function ArtworkTile({
         sizes={sizes}
         className="object-cover grayscale transition-transform duration-500 ease-out group-hover:scale-[1.04]"
       />
+      {/* Blood-red wash on hover — the one colour the studio allows */}
+      <span
+        aria-hidden
+        className="absolute inset-0 bg-blood-500/0 mix-blend-multiply transition-colors duration-500 group-hover:bg-blood-500/45"
+      />
     </div>
   );
 }

@@ -16,7 +16,13 @@ export function Footer() {
   const nav = useTranslations("nav");
 
   return (
-    <footer className="border-t border-ink-800 bg-ink-900">
+    <footer className="overflow-hidden border-t border-ink-800 bg-ink-900">
+      <p
+        aria-hidden
+        className="text-stroke-faint mx-auto max-w-6xl px-5 pt-12 font-display text-[10.5vw] leading-none font-bold tracking-tight whitespace-nowrap select-none sm:px-8 lg:text-[8.5rem]"
+      >
+        OBSIDIAN INK
+      </p>
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div>
           <p className="font-display text-sm font-bold tracking-[0.18em] uppercase">

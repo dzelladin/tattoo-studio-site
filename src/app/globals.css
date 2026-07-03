@@ -29,6 +29,24 @@
       transform: translateX(-50%);
     }
   }
+
+  --animate-spin-slow: spin-slow 90s linear infinite;
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Outlined display type — the ink is in the line, not the fill. */
+@utility text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-bone-300);
+}
+
+@utility text-stroke-faint {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-ink-700);
 }
 
 html {
@@ -69,16 +87,22 @@ body::after {
 /* Scroll-reveal (driven by the <Reveal> component) */
 .reveal {
   opacity: 0;
-  translate: 0 1.25rem;
+  translate: 0 1.5rem;
+  scale: 0.985;
+  filter: blur(6px);
   transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    translate 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    scale 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0s);
 }
 
 .reveal.is-visible {
   opacity: 1;
   translate: 0 0;
+  scale: 1;
+  filter: blur(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -88,9 +112,12 @@ body::after {
   .reveal {
     opacity: 1;
     translate: none;
+    scale: none;
+    filter: none;
     transition: none;
   }
-  .animate-marquee {
+  .animate-marquee,
+  .animate-spin-slow {
     animation: none;
   }
 }

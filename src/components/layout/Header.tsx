@@ -59,10 +59,10 @@ export function Header() {
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={cn(
-                "text-sm transition-colors",
+                "relative text-sm transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-blood-300 after:transition-transform after:duration-300",
                 isActive(item.href)
-                  ? "text-bone-100"
-                  : "text-bone-500 hover:text-bone-100",
+                  ? "text-bone-100 after:scale-x-100"
+                  : "text-bone-500 after:scale-x-0 hover:text-bone-100 hover:after:scale-x-100",
               )}
             >
               {t(item.key)}

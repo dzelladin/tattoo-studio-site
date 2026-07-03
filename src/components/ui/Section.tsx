@@ -30,20 +30,33 @@ export function SectionHeading({
   kicker,
   title,
   lede,
+  index,
 }: {
   kicker: string;
   title: string;
   lede?: string;
+  /** Editorial section number, rendered as a huge outlined ghost numeral. */
+  index?: string;
 }) {
   return (
-    <div className="max-w-2xl">
-      <Kicker>{kicker}</Kicker>
-      <h2 className="mt-4 font-display text-3xl leading-tight font-semibold text-balance sm:text-4xl">
-        {title}
-      </h2>
-      {lede ? (
-        <p className="mt-5 text-base leading-relaxed text-bone-300">{lede}</p>
+    <div className="relative max-w-2xl">
+      {index ? (
+        <span
+          aria-hidden
+          className="text-stroke-faint pointer-events-none absolute -top-12 -left-3 font-display text-[7rem] leading-none font-bold select-none sm:-top-16 sm:text-[9rem]"
+        >
+          {index}
+        </span>
       ) : null}
+      <div className="relative">
+        <Kicker>{kicker}</Kicker>
+        <h2 className="mt-4 font-display text-3xl leading-tight font-semibold text-balance sm:text-4xl">
+          {title}
+        </h2>
+        {lede ? (
+          <p className="mt-5 text-base leading-relaxed text-bone-300">{lede}</p>
+        ) : null}
+      </div>
     </div>
   );
 }

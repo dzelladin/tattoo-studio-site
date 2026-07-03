@@ -39,7 +39,13 @@ export async function PostCard({
         {post.excerpt}
       </p>
       <p className="mt-4 font-mono text-xs tracking-widest text-blood-300 uppercase">
-        {t("readEntry")} →
+        {t("readEntry")}{" "}
+        <span
+          aria-hidden
+          className="inline-block transition-transform duration-300 group-hover:translate-x-1.5"
+        >
+          →
+        </span>
       </p>
     </article>
   );

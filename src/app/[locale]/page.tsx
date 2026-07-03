@@ -25,6 +25,9 @@ export default async function HomePage({
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "home" });
+  // "Old patterns. New skin." → one line per sentence, alternating
+  // filled and outlined display type. Works in all three locales.
+  const heroLines = t("heroTitle").split(/(?<=\.)\s+/);
   const featured = GALLERY.slice(0, 5);
   const teaserImage = GALLERY.find((g) => g.id === "spine-ornament");
   const posts = (await getPosts(locale)).slice(0, 2);
@@ -35,46 +38,82 @@ export default async function HomePage({
 
   return (
     <>
-      {/* Hero — full-bleed photo under a left-weighted scrim */}
+      {/* Hero — giant two-tone type beside an offset photo panel */}
       <section className="relative overflow-hidden border-b border-ink-800">
+        {/* Faint photo wash on small screens, where the panel is hidden */}
         <Image
           src="/images/gallery/bodysuit-back.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[70%_18%] grayscale opacity-40"
+          className="object-cover object-[70%_18%] grayscale opacity-25 lg:opacity-0"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-linear-to-r from-ink-950 via-ink-950/75 to-ink-950/25"
+          className="absolute inset-0 bg-linear-to-r from-ink-950 via-ink-950/80 to-ink-950/40 lg:hidden"
         />
-        <div
-          aria-hidden
-          className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-ink-950 to-transparent"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-24 -right-24 h-[30rem] w-[30rem] opacity-20"
-        >
-          <Sigil seed="obsidian-ink-hero" accent />
-        </div>
 
-        <div className="relative mx-auto max-w-6xl px-5 py-28 sm:px-8 sm:py-40">
-          <Kicker>{t("heroKicker")}</Kicker>
-          <h1 className="mt-6 max-w-3xl font-display text-4xl leading-[1.08] font-bold text-balance sm:text-6xl lg:text-7xl">
-            {t("heroTitle")}
-          </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-bone-300">
-            {t("heroLede")}
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <ButtonLink href="/booking">{t("heroCtaPrimary")}</ButtonLink>
-            <ButtonLink href="/portfolio" variant="outline">
-              {t("heroCtaSecondary")}
-            </ButtonLink>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 sm:px-8 sm:py-32 lg:grid-cols-[1.15fr_1fr] lg:py-24">
+          <div>
+            <Kicker>{t("heroKicker")}</Kicker>
+            <h1 className="mt-8 font-display text-[clamp(2.8rem,10vw,4.5rem)] leading-[0.98] font-bold lg:text-[clamp(3.5rem,6vw,5.5rem)]">
+              {heroLines.map((line, i) => (
+                <span
+                  key={i}
+                  className={cn("block text-balance", i % 2 === 1 && "text-stroke")}
+                >
+                  {line}
+                </span>
+              ))}
+            </h1>
+            <p className="mt-8 max-w-xl border-l border-blood-500 pl-5 text-lg leading-relaxed text-bone-300">
+              {t("heroLede")}
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <ButtonLink href="/booking">{t("heroCtaPrimary")}</ButtonLink>
+              <ButtonLink href="/portfolio" variant="outline">
+                {t("heroCtaSecondary")}
+              </ButtonLink>
+            </div>
+          </div>
+
+          {/* Photo panel floating over a slowly rotating sigil */}
+          <div className="relative hidden lg:block">
+            <div
+              aria-hidden
+              className="animate-spin-slow absolute -inset-16 opacity-30"
+            >
+              <Sigil seed="obsidian-ink-hero" accent />
+            </div>
+            <div
+              aria-hidden
+              className="absolute -right-4 -bottom-4 h-full w-full border border-blood-700"
+            />
+            <div className="relative aspect-[3/4] overflow-hidden border border-ink-700">
+              <Image
+                src="/images/gallery/bodysuit-back.jpg"
+                alt={GALLERY[0].alt[locale]}
+                fill
+                priority
+                sizes="(min-width: 1024px) 480px, 0px"
+                className="object-cover object-top grayscale"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-ink-950/80 to-transparent"
+              />
+            </div>
           </div>
         </div>
+
+        {/* Vertical side label, wide screens only */}
+        <p
+          aria-hidden
+          className="absolute top-1/2 -right-8 hidden origin-center rotate-90 font-mono text-xs tracking-kicker whitespace-nowrap text-bone-500 uppercase xl:block"
+        >
+          {t("heroKicker")} ◆ EST. 2019
+        </p>
       </section>
 
       <Marquee items={marqueeItems} />
@@ -84,6 +123,7 @@ export default async function HomePage({
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
           <Reveal>
             <SectionHeading
+              index="01"
               kicker={t("studioKicker")}
               title={t("studioTitle")}
               lede={t("studioBody")}
@@ -121,7 +161,11 @@ export default async function HomePage({
       <Section className="border-t border-ink-800">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeading kicker={t("workKicker")} title={t("workTitle")} />
+            <SectionHeading
+              index="02"
+              kicker={t("workKicker")}
+              title={t("workTitle")}
+            />
             <Link
               href="/portfolio"
               className="font-mono text-sm tracking-widest text-blood-300 uppercase transition-colors hover:text-bone-100"
@@ -166,6 +210,7 @@ export default async function HomePage({
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
+              index="03"
               kicker={t("artistsKicker")}
               title={t("artistsTitle")}
             />
@@ -189,7 +234,11 @@ export default async function HomePage({
       {/* Journal */}
       <Section className="border-t border-ink-800">
         <Reveal>
-          <SectionHeading kicker={t("newsKicker")} title={t("newsTitle")} />
+          <SectionHeading
+            index="04"
+            kicker={t("newsKicker")}
+            title={t("newsTitle")}
+          />
         </Reveal>
         <div className="mt-6">
           {posts.map((post) => (
@@ -214,6 +263,12 @@ export default async function HomePage({
           className="object-cover object-[50%_30%] grayscale opacity-25"
         />
         <div aria-hidden className="absolute inset-0 bg-ink-950/55" />
+        <div
+          aria-hidden
+          className="animate-spin-slow absolute top-1/2 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 opacity-15"
+        >
+          <Sigil seed="obsidian-cta" />
+        </div>
         <div className="relative mx-auto max-w-2xl px-5 py-24 text-center sm:px-8 sm:py-32">
           <Reveal>
             <h2 className="font-display text-3xl font-semibold text-balance sm:text-4xl">

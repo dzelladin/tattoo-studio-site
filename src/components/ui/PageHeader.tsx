@@ -25,7 +25,7 @@ export function PageHeader({
       </div>
       <div className="relative mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <Kicker>{kicker}</Kicker>
-        <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight font-bold text-balance sm:text-5xl">
+        <h1 className="mt-4 max-w-3xl font-display text-[clamp(2.5rem,8vw,4rem)] leading-[1.02] font-bold text-balance sm:text-6xl">
           {title}
         </h1>
         {lede ? (

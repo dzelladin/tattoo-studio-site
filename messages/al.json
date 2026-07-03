@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Crna Reka — studio tatuazhesh blackwork, Shkup",
+    "description": "Studio tatuazhesh blackwork dhe dotwork në Debar Maalo, Shkup. Ornamenti ballkanik i rindërtuar në të zezë. Vetëm me termin."
+  },
+  "nav": {
+    "home": "Ballina",
+    "studio": "Studioja",
+    "artists": "Artistët",
+    "portfolio": "Portofoli",
+    "news": "Ditari",
+    "faq": "Çmimet & pyetjet",
+    "booking": "Rezervimi",
+    "bookCta": "Rezervo seancë",
+    "menu": "Hap menynë",
+    "close": "Mbyll menynë",
+    "mainLabel": "Navigimi kryesor",
+    "languageLabel": "Gjuha",
+    "skipToContent": "Kalo te përmbajtja"
+  },
+  "home": {
+    "heroKicker": "Studio blackwork — Shkup",
+    "heroTitle": "Motive të vjetra. Lëkurë e re.",
+    "heroLede": "Marrim gjeometrinë e ornamentit ballkanik — qëndisjet, gdhendjet e ikonostasëve, rrotat diellore — dhe e rindërtojmë si blackwork të rëndë, arkitektonik. Vetëm me termin.",
+    "heroCtaPrimary": "Rezervo seancë",
+    "heroCtaSecondary": "Shiko punët",
+    "studioKicker": "Studioja",
+    "studioTitle": "Nëpër qytetin e vjetër rrjedh një lumë i zi.",
+    "studioBody": "Crna Reka është kolektiv me tre artistë në Debar Maalo. Një stil, i marrë seriozisht: blackwork me rrënjë në ornamentin e këtij rajoni — pa ngjyra, pa portrete, pa mbushje.",
+    "studioLink": "Rreth studios",
+    "artistsKicker": "Kolektivi",
+    "artistsTitle": "Tre artistë. Një disiplinë.",
+    "artistsLink": "Njihu me artistët",
+    "workKicker": "Punë të zgjedhura",
+    "workTitle": "Punët e fundit",
+    "workLink": "Portofoli i plotë",
+    "newsKicker": "Ditari",
+    "newsTitle": "Nga studioja",
+    "newsLink": "Të gjitha shënimet",
+    "visitTitle": "Çdo projekt nis me një bisedë.",
+    "visitBody": "Na trego çfarë do të mbash mbi lëkurë. Përgjigjemi brenda dy ditësh pune me një vlerësim të sinqertë — dhe me një datë konsultimi nëse projekti i përshtatet studios.",
+    "visitCta": "Nis rezervimin"
+  },
+  "studio": {
+    "kicker": "Studioja",
+    "title": "Ornamenti është kujtesë.",
+    "lede": "Crna Reka — „lumi i zi“ — u hap më 2019, në një banesë përdhese në Debar Maalo, Shkup. Emri është rryma e vjetër e motiveve ballkanike që rishfaqet në sipërfaqe — kësaj here mbi lëkurë.",
+    "philosophyTitle": "Çfarë bëjmë",
+    "philosophyBody1": "Çdo kulturë e këtij rajoni ka endur gjeometri mbrojtëse në pëlhurë: rombe kundër syrit të keq, rrota diellore për vazhdimësi, kryqe e rozeta që shënojnë pragje. Ai fjalor s’ka qenë kurrë i menduar për muze — ka qenë i menduar të mbahet mbi trup.",
+    "philosophyBody2": "Punojmë vetëm në të zezë. Blackwork ornamental, dotwork dhe kompozime gjeometrike në format të madh, të dizajnuara për trupin konkret që do t’i mbajë. Nuk kopjojmë flash, nuk riprodhojmë punët e të tjerëve dhe nuk tatuojmë diçka pas së cilës nuk qëndrojmë.",
+    "philosophyBody3": "Rreth gjysma e projekteve nisin nga një motiv që e sjellin klientët — një anë nga përparësja e gjyshes, një gdhendje nga kisha e fshatit. Gjysma tjetër nis nga një ndjesi dhe një vend në trup. Të dyja janë të mirëseardhura.",
+    "processTitle": "Si ecën projekti",
+    "process1Title": "Kërkesa",
+    "process1Body": "Dërgon formularin: ideja, vendi, madhësia, buxheti. Përgjigjemi brenda dy ditësh pune.",
+    "process2Title": "Konsultimi",
+    "process2Body": "Tridhjetë minuta në studio ose me telefon. Flasim për referencat dhe rrjedhën e trupit, dhe caktojmë kaparin e datën.",
+    "process3Title": "Dizajni",
+    "process3Body": "Dizajni vizatohet për trupin tënd dhe të tregohet pak para seancës. Ndryshimet e mëdha të drejtimit bisedohen në konsultim — jo ditën e tatuimit.",
+    "process4Title": "Seanca",
+    "process4Body": "Seancat zgjasin deri në gjashtë orë, me pushime. Udhëzimet për shërimin i merr në letër, dhe pas katër javësh bëhet një kontroll.",
+    "spaceTitle": "Hapësira",
+    "spaceBody": "Studio përdhese me tre stacione private, dhomë sterilizimi me autoklavë dhe një kënd vizatimi që shërben edhe si galeri e vogël për grafikën lokale.",
+    "hygieneTitle": "Higjiena, pa yllëza",
+    "hygieneBody": "Gjilpëra dhe fishekë njëpërdorimësh, autoklavë e klasit spitalor me cikle të regjistruara, pigmente të certifikuara sipas REACH dhe politikë 18+ me dokument. Nëse ke një gjendje shëndetësore që ndikon në tatuim, do të të lutemi ta sqarosh më parë me mjekun tënd."
+  },
+  "artists": {
+    "kicker": "Kolektivi",
+    "title": "Tre artistë. Një disiplinë.",
+    "lede": "Ekip i vogël, me qëllim. Secili artist mban librin e vet, listën e vet të pritjes dhe një stil që e ka ngushtuar me vite.",
+    "specialtiesLabel": "Specialitetet",
+    "viewProfile": "Shiko profilin",
+    "worksTitle": "Punë të zgjedhura",
+    "bookWith": "Rezervo te {name}",
+    "backToArtists": "Të gjithë artistët",
+    "since": "Tatuon që nga {year}",
+    "instagramLabel": "Instagram"
+  },
+  "portfolio": {
+    "kicker": "Portofoli",
+    "title": "Punët",
+    "lede": "Punë të shëruara dhe të freskëta nga të tre artistët. Filtro sipas stilit — çdo punë vizatohet me porosi dhe jeton vetëm në një trup.",
+    "filterLabel": "Filtro sipas stilit",
+    "all": "Të gjitha stilet",
+    "empty": "Ende s’ka punë në këtë stil.",
+    "by": "nga {name}"
+  },
+  "news": {
+    "kicker": "Ditari",
+    "title": "Nga studioja",
+    "lede": "Shënime për procesin, punë të shëruara, artistë mysafirë dhe ndonjë ankesë për ornamentin. Shkruar nga artistët, jo nga marketingu.",
+    "readEntry": "Lexo shënimin",
+    "backToNews": "Të gjitha shënimet",
+    "byAuthor": "nga {name}"
+  },
+  "booking": {
+    "kicker": "Rezervimi",
+    "title": "Nis një projekt",
+    "lede": "Plotëso formularin dhe përgjigjemi brenda dy ditësh pune. Sa më konkret të jesh për vendin dhe madhësinë, aq më shpejt mund të themi po.",
+    "form": {
+      "name": "Emri",
+      "email": "Email-i",
+      "artist": "Artisti i preferuar",
+      "artistAny": "Pa preferencë",
+      "placement": "Vendi në trup",
+      "placementHint": "p.sh. parakrahu i jashtëm, shpina e plotë, kraharori",
+      "size": "Madhësia e përafërt",
+      "sizeSmall": "E vogël (deri 10 cm)",
+      "sizeMedium": "E mesme (10–20 cm)",
+      "sizeLarge": "E madhe (20+ cm / gjysmë mënge)",
+      "sizeXl": "Punë e plotë (mëngë, shpinë, kraharor)",
+      "idea": "Ideja jote",
+      "ideaHint": "Motive, referenca, kuptim — çfarëdo që ke. Minimumi 20 shenja.",
+      "consent": "Jam mbi 18 vjeç dhe pranoj të kontaktohem për këtë kërkesë.",
+      "submit": "Dërgo kërkesën",
+      "submitting": "Po dërgohet…"
+    },
+    "errors": {
+      "nameRequired": "Shkruaj emrin tënd.",
+      "emailInvalid": "Shkruaj një email të vlefshëm.",
+      "placementRequired": "Na trego ku në trup.",
+      "sizeRequired": "Zgjidh një madhësi të përafërt.",
+      "ideaMin": "Përshkruaje idenë me të paktën 20 shenja.",
+      "consentRequired": "Na duhet pëlqimi yt që të përgjigjemi.",
+      "formInvalid": "Kontrollo fushat e shënuara."
+    },
+    "success": {
+      "title": "Kërkesa u pranua.",
+      "body": "Përgjigjemi brenda dy ditësh pune. S’ka përgjigje pas kësaj? Shkruaj në studio@crnareka.mk.",
+      "again": "Dërgo kërkesë tjetër"
+    },
+    "error": {
+      "title": "Diçka shkoi keq.",
+      "body": "Kërkesa nuk kaloi. Provo përsëri ose shkruaj drejtpërdrejt në studio@crnareka.mk.",
+      "retry": "Provo përsëri"
+    },
+    "aside": {
+      "title": "Para se të shkruash",
+      "point1": "Punojmë vetëm në të zezë. Cover-up-et i vlerësojmë vetëm në studio, jo me email.",
+      "point2": "Mosha minimale është 18 vjeç, me dokument — pa përjashtime.",
+      "point3": "Kapari prej 50 € (3.000 den.) e rezervon datën dhe zbritet nga çmimi përfundimtar.",
+      "visitTitle": "Na vizito",
+      "hoursTitle": "Orari"
+    }
+  },
+  "faq": {
+    "kicker": "Çmimet & pyetjet",
+    "title": "Përgjigje të drejtpërdrejta",
+    "lede": "Sa kushton, si shërohet, çfarë nuk bëjmë. Nëse pyetja jote s’është këtu, bëje përmes formularit të rezervimit.",
+    "pricingTitle": "Çmimet",
+    "pricingNote": "Çmimi përfundimtar jepet në konsultim — lëkura, vendi dhe dendësia e detajeve e lëvizin shifrën. Këto diapazone mbulojnë shumicën e projekteve.",
+    "faqTitle": "Pyetje"
+  },
+  "cookies": {
+    "ariaLabel": "Pëlqimi për cookies",
+    "title": "Cookies",
+    "body": "Përdorim një cookie opsionale analitike për numërimin e vizitave. Asgjë nuk ngarkohet derisa të vendosësh, dhe refuzimi nuk ndryshon asgjë në funksionimin e faqes.",
+    "accept": "Prano",
+    "decline": "Refuzo"
+  },
+  "footer": {
+    "tagline": "Studio tatuazhesh blackwork dhe ornamentale. Debar Maalo, Shkup. Vetëm me termin.",
+    "visit": "Na vizito",
+    "addressLine1": "Debar Maalo, Aminta Treti 29",
+    "addressLine2": "1000 Shkup",
+    "hoursValue": "mar–sht, 11:00–19:00",
+    "contact": "Kontakti",
+    "navTitle": "Harta e faqes",
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "cookieSettings": "Cilësimet e cookies"
+  },
+  "notFound": {
+    "title": "S’ka asgjë këtu.",
+    "body": "Faqja është zhvendosur ose s’ka ekzistuar kurrë. Lumi e njeh shtratin e vet.",
+    "back": "Kthehu në ballinë"
+  }
+}

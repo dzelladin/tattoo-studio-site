@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Crna Reka — Blackwork tattoo studio, Skopje",
+    "description": "Blackwork and dotwork tattoo studio in Debar Maalo, Skopje. Balkan ornament rebuilt in black. By appointment only."
+  },
+  "nav": {
+    "home": "Home",
+    "studio": "Studio",
+    "artists": "Artists",
+    "portfolio": "Portfolio",
+    "news": "Journal",
+    "faq": "Pricing & FAQ",
+    "booking": "Booking",
+    "bookCta": "Book a session",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "mainLabel": "Main navigation",
+    "languageLabel": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "home": {
+    "heroKicker": "Blackwork studio — Skopje",
+    "heroTitle": "Old patterns. New skin.",
+    "heroLede": "We take the geometry of Balkan ornament — embroidery, iconostasis carving, solar wheels — and rebuild it as heavy, architectural blackwork. By appointment only.",
+    "heroCtaPrimary": "Book a session",
+    "heroCtaSecondary": "See the work",
+    "studioKicker": "The studio",
+    "studioTitle": "A black river runs through the old town.",
+    "studioBody": "Crna Reka is a three-artist collective in Debar Maalo. One style, taken seriously: blackwork with roots in the ornament of this region — no colour, no portraits, no filler.",
+    "studioLink": "About the studio",
+    "artistsKicker": "The collective",
+    "artistsTitle": "Three artists. One discipline.",
+    "artistsLink": "Meet the artists",
+    "workKicker": "Selected work",
+    "workTitle": "Recent pieces",
+    "workLink": "Full portfolio",
+    "newsKicker": "Journal",
+    "newsTitle": "From the studio",
+    "newsLink": "All entries",
+    "visitTitle": "Every project starts with a conversation.",
+    "visitBody": "Tell us what you want to carry. We answer within two working days with an honest assessment — and a consultation date if the project fits the studio.",
+    "visitCta": "Start a booking"
+  },
+  "studio": {
+    "kicker": "The studio",
+    "title": "Ornament is memory.",
+    "lede": "Crna Reka — “black river” — opened in 2019 in a ground-floor flat in Debar Maalo, Skopje. The name is the old current of Balkan pattern-making, resurfacing — this time on skin.",
+    "philosophyTitle": "What we do",
+    "philosophyBody1": "Every culture in this region wove protective geometry into cloth: diamonds against the evil eye, solar wheels for continuity, crosses and rosettes marking thresholds. That vocabulary was never meant for a museum — it was meant to be worn on the body.",
+    "philosophyBody2": "We work exclusively in black. Ornamental blackwork, dotwork and large-scale geometric composition, designed for the specific body that will carry it. We don’t copy flash, we don’t reproduce other artists’ work, and we don’t tattoo anything we can’t stand behind.",
+    "philosophyBody3": "Roughly half of our projects start from a motif a client brings — a sleeve from a grandmother’s apron, a carving from a village church. The other half start from a feeling and a placement. Both are welcome.",
+    "processTitle": "How a project runs",
+    "process1Title": "Inquiry",
+    "process1Body": "You send the booking form: idea, placement, size, budget. We reply within two working days.",
+    "process2Title": "Consultation",
+    "process2Body": "Thirty minutes at the studio or on a call. We talk references and body flow, and set the deposit and date.",
+    "process3Title": "Design",
+    "process3Body": "The design is drawn for your body and shown to you shortly before the session. Big changes of direction are discussed at consultation — not on tattoo day.",
+    "process4Title": "Session",
+    "process4Body": "Sessions run up to six hours, with breaks. Healing instructions come on paper, and a check-in follows at four weeks.",
+    "spaceTitle": "The space",
+    "spaceBody": "A ground-floor studio with three private stations, an autoclave-equipped sterilization room and a drawing corner that doubles as a small gallery for local printmaking.",
+    "hygieneTitle": "Hygiene, without asterisks",
+    "hygieneBody": "Single-use needles and cartridges, a hospital-grade autoclave with logged cycles, REACH-certified pigments, and an 18+ policy with ID. If you have a medical condition that affects tattooing, we’ll ask you to clear it with your doctor first."
+  },
+  "artists": {
+    "kicker": "The collective",
+    "title": "Three artists. One discipline.",
+    "lede": "Small on purpose. Each artist keeps their own book, their own waitlist, and a style they’ve spent years narrowing.",
+    "specialtiesLabel": "Specialties",
+    "viewProfile": "View profile",
+    "worksTitle": "Selected work",
+    "bookWith": "Book with {name}",
+    "backToArtists": "All artists",
+    "since": "Tattooing since {year}",
+    "instagramLabel": "Instagram"
+  },
+  "portfolio": {
+    "kicker": "Portfolio",
+    "title": "The work",
+    "lede": "Healed and fresh pieces from all three artists. Filter by style — every piece is drawn to order and lives on one body only.",
+    "filterLabel": "Filter by style",
+    "all": "All styles",
+    "empty": "No pieces in this style yet.",
+    "by": "by {name}"
+  },
+  "news": {
+    "kicker": "Journal",
+    "title": "From the studio",
+    "lede": "Notes on process, healed work, guest spots and the occasional complaint about ornament. Written by the artists, not by marketing.",
+    "readEntry": "Read entry",
+    "backToNews": "All entries",
+    "byAuthor": "by {name}"
+  },
+  "booking": {
+    "kicker": "Booking",
+    "title": "Start a project",
+    "lede": "Fill this in and we’ll reply within two working days. The more specific you are about placement and size, the faster we can say yes.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "artist": "Preferred artist",
+      "artistAny": "No preference",
+      "placement": "Placement on the body",
+      "placementHint": "e.g. outer forearm, full back, chest",
+      "size": "Approximate size",
+      "sizeSmall": "Small (up to 10 cm)",
+      "sizeMedium": "Medium (10–20 cm)",
+      "sizeLarge": "Large (20+ cm / half sleeve)",
+      "sizeXl": "Full piece (sleeve, back, chest)",
+      "idea": "Your idea",
+      "ideaHint": "Motifs, references, meaning — whatever you have. Minimum 20 characters.",
+      "consent": "I am over 18 and agree to be contacted about this inquiry.",
+      "submit": "Send inquiry",
+      "submitting": "Sending…"
+    },
+    "errors": {
+      "nameRequired": "Enter your name.",
+      "emailInvalid": "Enter a valid email address.",
+      "placementRequired": "Tell us where on the body.",
+      "sizeRequired": "Pick an approximate size.",
+      "ideaMin": "Describe the idea in at least 20 characters.",
+      "consentRequired": "We need your consent to reply.",
+      "formInvalid": "Check the highlighted fields."
+    },
+    "success": {
+      "title": "Inquiry received.",
+      "body": "We’ll reply within two working days. No answer after that? Write to studio@crnareka.mk.",
+      "again": "Send another inquiry"
+    },
+    "error": {
+      "title": "Something went wrong.",
+      "body": "Your inquiry didn’t go through. Try again, or email studio@crnareka.mk directly.",
+      "retry": "Try again"
+    },
+    "aside": {
+      "title": "Before you write",
+      "point1": "We only work in black. Cover-ups are assessed in person, not by email.",
+      "point2": "Minimum age is 18, with ID — no exceptions.",
+      "point3": "A deposit of €50 (3,000 MKD) books your date and comes off the final price.",
+      "visitTitle": "Visit",
+      "hoursTitle": "Hours"
+    }
+  },
+  "faq": {
+    "kicker": "Pricing & FAQ",
+    "title": "Straight answers",
+    "lede": "What it costs, how it heals, what we won’t do. If your question isn’t here, ask it through the booking form.",
+    "pricingTitle": "Pricing",
+    "pricingNote": "Final quotes are given at consultation — skin, placement and detail density all move the number. These ranges cover most projects.",
+    "faqTitle": "Questions"
+  },
+  "cookies": {
+    "ariaLabel": "Cookie consent",
+    "title": "Cookies",
+    "body": "We use one optional analytics cookie to count visits. Nothing loads until you decide, and declining changes nothing about how the site works.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "footer": {
+    "tagline": "Blackwork & ornamental tattoo studio. Debar Maalo, Skopje. By appointment only.",
+    "visit": "Visit",
+    "addressLine1": "Debar Maalo, Aminta Treti 29",
+    "addressLine2": "1000 Skopje",
+    "hoursValue": "Tue–Sat, 11:00–19:00",
+    "contact": "Contact",
+    "navTitle": "Site",
+    "rights": "All rights reserved.",
+    "cookieSettings": "Cookie settings"
+  },
+  "notFound": {
+    "title": "Nothing here.",
+    "body": "The page moved, or never existed. The river keeps its own course.",
+    "back": "Back to home"
+  }
+}

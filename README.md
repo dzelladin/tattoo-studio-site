@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Crna Reka — studio site
 
-## Getting Started
+Presentational website for **Crna Reka**, a (fictional) blackwork and dotwork
+tattoo collective in Debar Maalo, Skopje. Three artists, one discipline:
+Balkan ornament — embroidery geometry, iconostasis carving, solar wheels —
+rebuilt as heavy, architectural blackwork. The site is trilingual
+(Macedonian / English / Albanian), fully static except the booking API, and
+deliberately CMS-free.
 
-First, run the development server:
+## Stack & why
+
+| Choice | Reason |
+| --- | --- |
+| **Next.js 16, App Router** | Static prerendering per locale, server components for zero-JS content pages, one API route for the form. |
+| **TypeScript** | The content model is typed; a missing translation or bad style id fails the build, not production. |
+| **Tailwind v4** | Design tokens live in CSS (`@theme` in `src/app/globals.css`) — ink/bone/blood palette, three font families. |
+| **next-intl v4** | Locale routing (`/mk`, `/en`, `/al`), message catalogs, date formatting. |
+| **zod** | One schema validates the booking form on the client *and* the API route. |
+| **Resend** | Real email delivery for inquiries; filesystem fallback in dev. |
+| **MDX (next-mdx-remote)** | The journal is a real content collection: files on disk with frontmatter, not JSX. |
+
+No CMS, no database: for a five-page studio site, typed TS modules + MDX files
+*are* the CMS. Everything editorial is editable without touching a component.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000 → redirects to /mk
+npm run build && npm start   # production
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Optional environment (`cp .env.example .env.local`):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `RESEND_API_KEY`, `BOOKING_INBOX`, `BOOKING_FROM` — booking inquiries are
+  emailed via Resend. **Without a key, submissions append to
+  `.bookings/inbox.ndjson`** so nothing is lost in development.
+- `NEXT_PUBLIC_ANALYTICS_SRC` (+ `_DOMAIN`) — an analytics script that loads
+  **only after cookie consent** (see below). Unset = nothing ever loads.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How i18n works
 
-## Learn More
+- `src/i18n/routing.ts` declares locales `["mk", "en", "al"]`, default `mk`.
+  `src/proxy.ts` (Next 16's middleware) redirects `/` → `/mk` and prefixes all
+  routes. The `/al` prefix is a product requirement; since Albanian's ISO code
+  is `sq`, the layout maps it: `<html lang="sq">` on `/al/*`.
+- **UI strings** live in `messages/{mk,en,al}.json` — full catalogs, every key
+  translated in all three languages.
+- **Content strings** (artist bios, gallery titles/alt text, FAQ, pricing)
+  live with the data as `Localized = Record<Locale, string>` objects, so a
+  content edit touches one file, not three catalogs.
+- **Long-form content** (journal) is one MDX file per locale per post:
+  `content/news/{locale}/{slug}.mdx`. Same slug across locales, so the
+  language switcher works on article pages.
 
-To learn more about Next.js, take a look at the following resources:
+## Content model
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/content/styles.ts    shared style vocabulary (id + localized label)
+src/content/artists.ts   Artist: slug, name, role, since, specialties[styleId], bio…
+src/content/gallery.ts   GalleryItem: id, title, artistSlug, styles[], year,
+                         placement, alt — filterable portfolio derives from this
+src/content/pricing.ts   PricingTier, src/content/faq.ts FaqItem
+content/news/…           journal posts (MDX + frontmatter: title/date/excerpt/author)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`artists`, `gallery` and `styles` reference each other by id — the portfolio
+filter, artist specialties and per-artist work lists all derive from the same
+vocabulary. Imagery is a deterministic generative SVG ornament
+(`src/components/ui/Sigil.tsx`) seeded per item — placeholder art in the
+brand's language until real photography exists; each tile still carries real
+alt text (`role="img"` + `aria-label`).
 
-## Deploy on Vercel
+## Booking form
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`src/lib/booking.ts` (zod) is imported by both the client form and
+`POST` handler at `src/app/api/booking/route.ts`, so validation cannot drift.
+Error messages are i18n keys (`booking.errors.*`) resolved where they're
+displayed. The form has explicit submitting / success / server-error states,
+focus moves to the error summary on failure, and a honeypot field silently
+drops bots with a convincing `200`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Cookie consent
+
+Real consent, not a cosmetic banner: the `cr-consent` cookie is the single
+source of truth, exposed to React via `useSyncExternalStore`
+(`src/lib/consent.ts`, `src/components/consent/`). Until a visitor accepts,
+`AnalyticsGate` renders nothing — the non-essential script is never requested.
+Declining is persisted equally, and the footer's "Cookie settings" reopens the
+banner.
+
+## Accessibility
+
+Semantic landmarks and one `h1` per page, skip link, keyboard-operable menu
+(Escape closes, focus states everywhere via `:focus-visible`), `aria-pressed`
+filter buttons, `aria-invalid`/`aria-describedby` on form fields, native
+`<details>` FAQ, `prefers-reduced-motion` disables all scroll/hover motion,
+and palette contrast ≥ AA on the dark ground.
+
+---
+
+Progress log and architectural decisions: [PROGRESS.md](./PROGRESS.md).

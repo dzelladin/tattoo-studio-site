@@ -40,7 +40,7 @@ export function GalleryGrid({
 
   return (
     <div>
-      <fieldset className="mt-10">
+      <fieldset>
         <legend className="sr-only">{t("filterLabel")}</legend>
         <div className="flex flex-wrap gap-2" role="group">
           <FilterButton

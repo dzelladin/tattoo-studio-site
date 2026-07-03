@@ -73,6 +73,22 @@ Booking, FAQ/Pricing, localized 404 (`not-found.tsx` + `[...rest]` catch-all).
   useSyncExternalStore, header menu closes via render-time state adjustment).
 - Contrast checked: bone-500 on ink-950 ≈ 6.3:1, blood-300 ≈ 5.8:1 (AA).
 
+## Phase 7 — Visual richness pass (2026-07-03) ✅
+
+User feedback: "too bland, empty black". Fixes, all brand-consistent:
+
+- Global film-grain overlay (`body::after`, inline SVG turbulence, 5%).
+- Home: full-bleed photo hero (bodysuit-back under a left scrim), type
+  marquee strip (localized style vocabulary, aria-hidden, reduced-motion
+  freezes it), studio teaser with offset photo + red corner accent,
+  featured work as a 2×2-anchored mosaic with overlaid captions, CTA band
+  over a photo.
+- New shared `PageHeader` (kicker/h1/lede + faint title-seeded sigil
+  bleeding off the right) replaces the hand-rolled header on portfolio,
+  artists, news, booking, FAQ and studio pages — deduplication + texture.
+- Studio page got a full-width photo band; artist cards got "01/02/03"
+  index chips.
+
 ## Decisions worth remembering
 
 - **No CMS** on purpose: content = typed TS modules + MDX. Right size for a

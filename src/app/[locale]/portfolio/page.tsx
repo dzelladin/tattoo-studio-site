@@ -4,7 +4,8 @@ import type { Locale } from "@/i18n/routing";
 import { getArtist } from "@/content/artists";
 import { GALLERY } from "@/content/gallery";
 import { STYLES } from "@/content/styles";
-import { Kicker, Section } from "@/components/ui/Section";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { Section } from "@/components/ui/Section";
 import { GalleryGrid } from "@/components/work/GalleryGrid";
 
 export async function generateMetadata({
@@ -45,16 +46,11 @@ export default async function PortfolioPage({
   const styles = STYLES.map((s) => ({ id: s.id, label: s.label[locale] }));
 
   return (
-    <Section>
-      <Kicker>{t("kicker")}</Kicker>
-      <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight font-bold text-balance sm:text-5xl">
-        {t("title")}
-      </h1>
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-bone-300">
-        {t("lede")}
-      </p>
-
-      <GalleryGrid items={items} styles={styles} />
-    </Section>
+    <>
+      <PageHeader kicker={t("kicker")} title={t("title")} lede={t("lede")} />
+      <Section>
+        <GalleryGrid items={items} styles={styles} />
+      </Section>
+    </>
   );
 }

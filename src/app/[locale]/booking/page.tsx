@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { ARTISTS } from "@/content/artists";
-import { Kicker, Section } from "@/components/ui/Section";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { Section } from "@/components/ui/Section";
 import { BookingForm } from "@/components/booking/BookingForm";
 
 export async function generateMetadata({
@@ -28,16 +29,10 @@ export default async function BookingPage({
   const artistOptions = ARTISTS.map((a) => ({ slug: a.slug, name: a.name }));
 
   return (
-    <Section>
-      <Kicker>{t("kicker")}</Kicker>
-      <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight font-bold text-balance sm:text-5xl">
-        {t("title")}
-      </h1>
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-bone-300">
-        {t("lede")}
-      </p>
-
-      <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_20rem]">
+    <>
+      <PageHeader kicker={t("kicker")} title={t("title")} lede={t("lede")} />
+      <Section>
+        <div className="grid gap-12 lg:grid-cols-[1fr_20rem]">
         <div className="relative">
           <BookingForm artists={artistOptions} />
         </div>
@@ -81,7 +76,8 @@ export default async function BookingPage({
             <p className="mt-3 text-sm text-bone-300">{tFooter("hoursValue")}</p>
           </div>
         </aside>
-      </div>
-    </Section>
+        </div>
+      </Section>
+    </>
   );
 }

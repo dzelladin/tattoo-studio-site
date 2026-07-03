@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
-import { Kicker, Section, SectionHeading } from "@/components/ui/Section";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { Sigil } from "@/components/ui/Sigil";
 
 export async function generateMetadata({
   params,
@@ -28,22 +29,7 @@ export default async function StudioPage({
 
   return (
     <>
-      <Section className="border-b border-ink-800">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
-          <div className="max-w-2xl">
-            <Kicker>{t("kicker")}</Kicker>
-            <h1 className="mt-4 font-display text-4xl leading-tight font-bold text-balance sm:text-5xl">
-              {t("title")}
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-bone-300">
-              {t("lede")}
-            </p>
-          </div>
-          <div aria-hidden className="hidden h-64 w-64 opacity-50 lg:block">
-            <Sigil seed="studio-page" accent />
-          </div>
-        </div>
-      </Section>
+      <PageHeader kicker={t("kicker")} title={t("title")} lede={t("lede")} />
 
       <Section>
         <Reveal>
@@ -62,7 +48,18 @@ export default async function StudioPage({
         </div>
       </Section>
 
-      <Section className="border-t border-ink-800">
+      <div className="relative h-64 overflow-hidden border-y border-ink-800 sm:h-80">
+        <Image
+          src="/images/gallery/diamond-back.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-[50%_25%] grayscale opacity-70"
+        />
+        <div aria-hidden className="absolute inset-0 bg-ink-950/30" />
+      </div>
+
+      <Section>
         <Reveal>
           <SectionHeading kicker={t("kicker")} title={t("processTitle")} />
         </Reveal>

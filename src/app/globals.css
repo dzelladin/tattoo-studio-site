@@ -22,6 +22,13 @@
   --font-mono: var(--font-jetbrains), monospace;
 
   --tracking-kicker: 0.22em;
+
+  --animate-marquee: marquee 45s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 html {
@@ -33,6 +40,18 @@ body {
   color: var(--color-bone-100);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Film grain over everything — kills the flat-black void without
+   touching any component. Pure decoration, so it ignores the pointer. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection {
@@ -70,5 +89,8 @@ body {
     opacity: 1;
     translate: none;
     transition: none;
+  }
+  .animate-marquee {
+    animation: none;
   }
 }

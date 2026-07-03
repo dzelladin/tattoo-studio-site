@@ -3,7 +3,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { FAQ } from "@/content/faq";
 import { PRICING } from "@/content/pricing";
-import { Kicker, Section, SectionHeading } from "@/components/ui/Section";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 
 export async function generateMetadata({
@@ -27,15 +28,7 @@ export default async function FaqPage({
 
   return (
     <>
-      <Section className="border-b border-ink-800">
-        <Kicker>{t("kicker")}</Kicker>
-        <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight font-bold text-balance sm:text-5xl">
-          {t("title")}
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-bone-300">
-          {t("lede")}
-        </p>
-      </Section>
+      <PageHeader kicker={t("kicker")} title={t("title")} lede={t("lede")} />
 
       <Section>
         <Reveal>

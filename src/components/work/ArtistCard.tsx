@@ -8,9 +8,12 @@ import { styleLabel } from "@/content/styles";
 export async function ArtistCard({
   artist,
   locale,
+  index,
 }: {
   artist: Artist;
   locale: Locale;
+  /** 1-based position, shown as an editorial "01" chip on the portrait. */
+  index?: number;
 }) {
   const t = await getTranslations({ locale, namespace: "artists" });
 
@@ -27,6 +30,14 @@ export async function ArtistCard({
           sizes="(min-width: 640px) 30vw, 90vw"
           className="object-cover grayscale transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
+        {index ? (
+          <span
+            aria-hidden
+            className="absolute top-3 left-3 border border-ink-700 bg-ink-950/80 px-2 py-1 font-mono text-xs tracking-widest text-blood-300"
+          >
+            {String(index).padStart(2, "0")}
+          </span>
+        ) : null}
       </div>
       <div className="p-6">
         <h3 className="font-display text-lg font-semibold">{artist.name}</h3>

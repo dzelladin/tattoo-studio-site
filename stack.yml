@@ -1,0 +1,8 @@
+version: 1
+ingress:
+  - name: app
+    service: web      # the compose service to expose
+    port: 3000        # the port it listens on
+    primary: true
+    access:
+      type: cas       # university login required; use "public" for no login

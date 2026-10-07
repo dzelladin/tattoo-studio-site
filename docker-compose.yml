@@ -1,19 +1,15 @@
 services:
   web:
     build: .
-    restart: unless-stopped
     # No "ports:" on purpose — RepoRun's ingress reaches the container
-    # directly on 3000 (see stack.yml). Publishing a host port is not needed.
+    # directly on 3000 (see stack.yml).
     expose:
       - "3000"
+    cpus: 0.5
+    mem_limit: 512m
     environment:
       # All optional. Without RESEND_API_KEY, booking inquiries are appended
-      # to /app/.bookings/inbox.ndjson (kept in the volume below).
+      # to /app/.bookings/inbox.ndjson inside the container.
       RESEND_API_KEY: ${RESEND_API_KEY:-}
       BOOKING_INBOX: ${BOOKING_INBOX:-studio@obsidianink.mk}
       BOOKING_FROM: ${BOOKING_FROM:-bookings@obsidianink.mk}
-    volumes:
-      - bookings:/app/.bookings
-
-volumes:
-  bookings:
